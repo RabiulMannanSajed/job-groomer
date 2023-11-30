@@ -1,0 +1,490 @@
+[
+  {
+    "category": "Software Engineering",
+    "question": "What does 'MVC' stand for in the context of software design?",
+    "options": [
+      { "id": 0, "text": "Model-View-Controller", "isCorrect": true },
+      { "id": 1, "text": "Most Valuable Code", "isCorrect": false },
+      { "id": 2, "text": "Main View Configuration", "isCorrect": false },
+      { "id": 3, "text": "Modular View Collaboration", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Software Engineering",
+    "question": "What is the purpose of 'dependency injection' in software development?",
+    "options": [
+      { "id": 0, "text": "Optimizing database queries", "isCorrect": false },
+      { "id": 1, "text": "Reducing code complexity", "isCorrect": false },
+      {
+        "id": 2,
+        "text": "Managing external dependencies by injecting them into a class or method",
+        "isCorrect": true
+      },
+      { "id": 3, "text": "Creating secure login systems", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Software Engineering",
+    "question": "What is the purpose of 'Scrum' in agile development?",
+    "options": [
+      { "id": 0, "text": "A programming language", "isCorrect": false },
+      {
+        "id": 1,
+        "text": "A project management framework for agile development",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "text": "A type of software testing methodology",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "text": "A design pattern for user interfaces",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "category": "Software Engineering",
+    "question": "What is the purpose of 'code review' in the software development process?",
+    "options": [
+      {
+        "id": 0,
+        "text": "Optimizing database performance",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "text": "Ensuring code quality through inspection and feedback",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "text": "Automating the deployment process",
+        "isCorrect": false
+      },
+      { "id": 3, "text": "Creating user documentation", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Software Engineering",
+    "question": "What is a 'bug' in software development?",
+    "options": [
+      { "id": 0, "text": "A feature request", "isCorrect": false },
+      {
+        "id": 1,
+        "text": "An error or flaw in the code that causes unexpected behavior",
+        "isCorrect": true
+      },
+      { "id": 2, "text": "A planned software enhancement", "isCorrect": false },
+      {
+        "id": 3,
+        "text": "A programming language syntax error",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "category": "Technology",
+    "question": "Who is the CEO of Tesla Inc.?",
+    "options": [
+      { "id": 0, "text": "Elon Musk", "isCorrect": true },
+      { "id": 1, "text": "Jeff Bezos", "isCorrect": false },
+      { "id": 2, "text": "Tim Cook", "isCorrect": false },
+      { "id": 3, "text": "Satya Nadella", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Technology",
+    "question": "What is the purpose of 'blockchain' technology?",
+    "options": [
+      {
+        "id": 0,
+        "text": "Creating virtual reality experiences",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "text": "Storing and validating digital transactions in a decentralized and secure manner",
+        "isCorrect": true
+      },
+      { "id": 2, "text": "Optimizing computer graphics", "isCorrect": false },
+      {
+        "id": 3,
+        "text": "Developing artificial intelligence applications",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "category": "Technology",
+    "question": "What is the main purpose of 'augmented reality'?",
+    "options": [
+      {
+        "id": 0,
+        "text": "Enhancing real-world experiences with computer-generated elements",
+        "isCorrect": true
+      },
+      {
+        "id": 1,
+        "text": "Optimizing database performance",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "text": "Developing secure software systems",
+        "isCorrect": false
+      },
+      { "id": 3, "text": "Creating decentralized networks", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Technology",
+    "question": "What is the primary function of 'machine learning'?",
+    "options": [
+      { "id": 0, "text": "Automating software testing", "isCorrect": false },
+      {
+        "id": 1,
+        "text": "Enabling computers to learn and make decisions without explicit programming",
+        "isCorrect": true
+      },
+      { "id": 2, "text": "Optimizing website performance", "isCorrect": false },
+      { "id": 3, "text": "Ensuring network security", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Technology",
+    "question": "Which social media platform was founded by Mark Zuckerberg?",
+    "options": [
+      { "id": 0, "text": "Twitter", "isCorrect": false },
+      { "id": 1, "text": "LinkedIn", "isCorrect": false },
+      { "id": 2, "text": "Facebook", "isCorrect": true },
+      { "id": 3, "text": "Instagram", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Web Development",
+    "question": "What does CSS stand for in web development?",
+    "options": [
+      { "id": 0, "text": "Cascading Style Sheet", "isCorrect": true },
+      { "id": 1, "text": "Computer Style Script", "isCorrect": false },
+      { "id": 2, "text": "Creative Style System", "isCorrect": false },
+      { "id": 3, "text": "Code Styling System", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Web Development",
+    "question": "Which programming language is mainly used for client-side web development?",
+    "options": [
+      { "id": 0, "text": "Python", "isCorrect": false },
+      { "id": 1, "text": "JavaScript", "isCorrect": true },
+      { "id": 2, "text": "Ruby", "isCorrect": false },
+      { "id": 3, "text": "Java", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Web Development",
+    "question": "What is the purpose of the HTML 'doctype' declaration?",
+    "options": [
+      { "id": 0, "text": "Defining document structure", "isCorrect": false },
+      {
+        "id": 1,
+        "text": "Specifying the version of HTML being used",
+        "isCorrect": true
+      },
+      { "id": 2, "text": "Including external stylesheets", "isCorrect": false },
+      { "id": 3, "text": "Creating responsive layouts", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Web Development",
+    "question": "Which popular version control system is widely used in web development projects?",
+    "options": [
+      { "id": 0, "text": "SVN", "isCorrect": false },
+      { "id": 1, "text": "Git", "isCorrect": true },
+      { "id": 2, "text": "Mercurial", "isCorrect": false },
+      { "id": 3, "text": "Perforce", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Web Development",
+    "question": "What is the purpose of the 'viewport' meta tag in HTML?",
+    "options": [
+      {
+        "id": 0,
+        "text": "Setting the background color of the page",
+        "isCorrect": false
+      },
+      { "id": 1, "text": "Defining the page title", "isCorrect": false },
+      {
+        "id": 2,
+        "text": "Configuring the browser's viewport for responsive design",
+        "isCorrect": true
+      },
+      { "id": 3, "text": "Embedding external scripts", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Cybersecurity",
+    "question": "What is a 'firewall' in network security?",
+    "options": [
+      {
+        "id": 0,
+        "text": "A protective barrier for physical servers",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "text": "A security system that monitors and controls incoming and outgoing network traffic",
+        "isCorrect": true
+      },
+      { "id": 2, "text": "A software for debugging code", "isCorrect": false },
+      { "id": 3, "text": "A tool for database encryption", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Cybersecurity",
+    "question": "What is 'phishing' in the context of cybersecurity?",
+    "options": [
+      {
+        "id": 0,
+        "text": "A method for secure file sharing",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "text": "A social engineering attack that attempts to trick individuals into revealing sensitive information",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "text": "A form of server authentication",
+        "isCorrect": false
+      },
+      { "id": 3, "text": "A type of encryption algorithm", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Cybersecurity",
+    "question": "What is the purpose of 'two-factor authentication' (2FA)?",
+    "options": [
+      {
+        "id": 0,
+        "text": "A method for secure data transmission",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "text": "Enhancing security by requiring users to provide two forms of identification",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "text": "A firewall configuration for dual-layer protection",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "text": "A type of encryption for biometric data",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "category": "Cybersecurity",
+    "question": "What is 'malware'?",
+    "options": [
+      { "id": 0, "text": "A type of computer hardware", "isCorrect": false },
+      {
+        "id": 1,
+        "text": "Malicious software designed to harm or exploit computer systems",
+        "isCorrect": true
+      },
+      { "id": 2, "text": "A secure coding practice", "isCorrect": false },
+      { "id": 3, "text": "A type of programming language", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Cybersecurity",
+    "question": "What is a 'zero-day vulnerability'?",
+    "options": [
+      {
+        "id": 0,
+        "text": "A software development methodology",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "text": "A security flaw that is exploited before the software creator is aware of it",
+        "isCorrect": true
+      },
+      { "id": 2, "text": "A type of encryption algorithm", "isCorrect": false },
+      {
+        "id": 3,
+        "text": "A method for secure data storage",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "category": "Artificial Intelligence",
+    "question": "What is 'machine learning'?",
+    "options": [
+      { "id": 0, "text": "A type of computer hardware", "isCorrect": false },
+      {
+        "id": 1,
+        "text": "A method for automated learning from data without explicit programming",
+        "isCorrect": true
+      },
+      { "id": 2, "text": "A programming language", "isCorrect": false },
+      { "id": 3, "text": "A secure coding practice", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Artificial Intelligence",
+    "question": "What is the Turing Test in the context of AI?",
+    "options": [
+      { "id": 0, "text": "A method for data encryption", "isCorrect": false },
+      {
+        "id": 1,
+        "text": "A test to determine if a machine's behavior is indistinguishable from that of a human",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "text": "A programming paradigm for neural networks",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "text": "A measure of computer processing speed",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "category": "Artificial Intelligence",
+    "question": "What is 'natural language processing' (NLP)?",
+    "options": [
+      {
+        "id": 0,
+        "text": "A method for secure data transmission",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "text": "A subfield of AI focused on the interaction between computers and human language",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "text": "A programming language for AI development",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "text": "A technique for quantum computing",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "category": "Artificial Intelligence",
+    "question": "What is the purpose of a 'neural network' in AI?",
+    "options": [
+      { "id": 0, "text": "A firewall for AI systems", "isCorrect": false },
+      {
+        "id": 1,
+        "text": "A system of algorithms designed to recognize patterns",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "text": "A method for database optimization",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "text": "A programming language for AI development",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "category": "Artificial Intelligence",
+    "question": "What is the concept of 'reinforcement learning'?",
+    "options": [
+      {
+        "id": 0,
+        "text": "A method for secure data storage",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "text": "A type of machine learning where an agent learns to make decisions by receiving feedback from its environment",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "text": "A technique for computer vision",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "text": "A system for natural language understanding",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "category": "Programming Languages",
+    "question": "What programming language is often used for developing mobile applications for iOS?",
+    "options": [
+      { "id": 0, "text": "Java", "isCorrect": false },
+      { "id": 1, "text": "Swift", "isCorrect": true },
+      { "id": 2, "text": "Kotlin", "isCorrect": false },
+      { "id": 3, "text": "C#", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Programming Languages",
+    "question": "In web development, what does 'CSS' stand for?",
+    "options": [
+      { "id": 0, "text": "Computer Style Sheets", "isCorrect": false },
+      { "id": 1, "text": "Creative Style Sheets", "isCorrect": false },
+      { "id": 2, "text": "Cascading Style Sheets", "isCorrect": true },
+      { "id": 3, "text": "Coded Style Sheets", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Programming Languages",
+    "question": "Which programming language is often used for data analysis and machine learning?",
+    "options": [
+      { "id": 0, "text": "Java", "isCorrect": false },
+      { "id": 1, "text": "C++", "isCorrect": false },
+      { "id": 2, "text": "Python", "isCorrect": true },
+      { "id": 3, "text": "Ruby", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Programming Languages",
+    "question": "What is the primary purpose of 'TypeScript'?",
+    "options": [
+      { "id": 0, "text": "Server-side scripting", "isCorrect": false },
+      { "id": 1, "text": "Static typing for JavaScript", "isCorrect": true },
+      { "id": 2, "text": "Game development", "isCorrect": false },
+      { "id": 3, "text": "Artificial Intelligence", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Programming Languages",
+    "question": "Which programming language is commonly used for developing Android applications?",
+    "options": [
+      { "id": 0, "text": "Swift", "isCorrect": false },
+      { "id": 1, "text": "Java", "isCorrect": true },
+      { "id": 2, "text": "Kotlin", "isCorrect": false },
+      { "id": 3, "text": "C#", "isCorrect": false }
+    ]
+  }
+]

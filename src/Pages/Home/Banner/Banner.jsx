@@ -13,7 +13,7 @@ const Banner = () => {
   return (
     <div className="carousel w-full h-[600px]">
       <div id="slide1" className="carousel-item relative w-full ">
-        <img src={img1} className="w-full rounded-lg rounded-lg" />
+        <img src={img1} className="w-full  rounded-lg" />
 
         <div className="absolute rounded flex h-full items-center left-0 bottom-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00)] ">
           <div className="text-white w-1/2 pl-12 space-y-7 ">

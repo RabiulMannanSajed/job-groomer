@@ -2,7 +2,7 @@
   {
     "_id": 1,
     "companyName": "Olloy",
-    "jobName" : "environmental",
+    "jobName": "Cloud Computing",
     "companyLogo": "https://i.ibb.co/X7L70gK/company-Logo.webp",
     "location": [{ "lat": 50.07290300915663 }, { "lan": 4.607022846595331 }],
     "jobTitle": "Data Entry With Marketing work from home job/internship at Across The Globe (ATG)",
@@ -24,7 +24,7 @@
   {
     "_id": 2,
     "companyName": "Tech Solutions",
-    "jobName" : "environmental",
+    "jobName": "Artificial Intelligence",
     "companyLogo": "https://i.ibb.co/xyz123/tech-solutions.png",
     "location": [{ "lat": 40.7128 }, { "lan": -74.006 }],
     "jobTitle": "Software Developer Intern",
@@ -45,7 +45,7 @@
   {
     "_id": 3,
     "companyName": "EcoTech Solutions",
-    "jobName" : "environmental",
+    "jobName": "Web Development",
     "companyLogo": "https://i.ibb.co/abc456/ecotech.png",
     "location": [{ "lat": 34.0522 }, { "lan": -118.2437 }],
     "jobTitle": "Environmental Research Assistant",
@@ -66,7 +66,7 @@
   {
     "_id": 4,
     "companyName": "Creative Minds Studio",
-    "jobName" : "environmental",
+    "jobName": "environmental",
     "companyLogo": "https://i.ibb.co/def789/creative-minds.png",
     "location": [{ "lat": 51.5099 }, { "lan": -0.118 }],
     "jobTitle": "Graphic Design Internship",
@@ -87,7 +87,7 @@
   {
     "_id": 5,
     "companyName": "HealthTech Innovations",
-    "jobName" : "environmental",
+    "jobName": "Technology",
     "companyLogo": "https://i.ibb.co/ghi101/healthtech.png",
     "location": [{ "lat": 37.7749, "lan": -122.4194 }],
     "jobTitle": "Healthcare Data Analyst",
@@ -108,7 +108,7 @@
   {
     "_id": 6,
     "companyName": "Global Marketing Hub",
-    "jobName" : "environmental",
+    "jobName": "Programming Languages",
     "companyLogo": "https://i.ibb.co/jkl202/global-marketing.png",
     "location": [{ "lat": 48.8566 }, { "lan": 2.3522 }],
     "jobTitle": "Social Media Marketing Intern",
@@ -129,7 +129,7 @@
   {
     "_id": 7,
     "companyName": "InnovateTech Labs",
-    "jobName" : "environmental",
+    "jobName": "Software Engineering",
     "companyLogo": "https://i.ibb.co/mno303/innovatetech.png",
     "location": [{ "lat": 37.7749 }, { "lan": -122.4194 }],
     "jobTitle": "AI Research Intern",

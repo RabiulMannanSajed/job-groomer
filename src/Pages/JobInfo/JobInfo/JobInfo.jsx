@@ -4,7 +4,9 @@ import JobInfoCart from "../JobInfoCart/JobInfoCart";
 
 const JobInfo = () => {
   const [dataOfJob, setDataOfJob] = useState([]);
+
   const { id } = useParams();
+  
   const jobInfo = useLoaderData();
 
   useEffect(() => {

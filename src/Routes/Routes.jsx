@@ -3,6 +3,7 @@ import Main from "../layout/Main";
 import Home from "../Pages/Home/Home/Home";
 import Jobs from "../Pages/Job/Jobs/Jobs";
 import JobInfo from "../Pages/JobInfo/JobInfo/JobInfo";
+import TakeTest from "../Pages/Test/TakeTest/TakeTest";
 
 export const router = createBrowserRouter([
   {
@@ -21,6 +22,11 @@ export const router = createBrowserRouter([
         path: "/jobInfo/:id",
         element: <JobInfo></JobInfo>,
         loader: () => fetch("/office.json"),
+      },
+      {
+        path: "/takeTest/:jobName",
+        element: <TakeTest></TakeTest>,
+        loader: () => fetch("/que.json"),
       },
     ],
   },
