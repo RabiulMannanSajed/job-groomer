@@ -67,6 +67,7 @@
       { "id": 3, "text": "Creating user documentation", "isCorrect": false }
     ]
   },
+
   {
     "category": "Software Engineering",
     "question": "What is a 'bug' in software development?",
@@ -153,6 +154,7 @@
       { "id": 3, "text": "Ensuring network security", "isCorrect": false }
     ]
   },
+
   {
     "category": "Technology",
     "question": "Which social media platform was founded by Mark Zuckerberg?",
@@ -207,6 +209,7 @@
       { "id": 3, "text": "Perforce", "isCorrect": false }
     ]
   },
+
   {
     "category": "Web Development",
     "question": "What is the purpose of the 'viewport' meta tag in HTML?",
@@ -305,6 +308,7 @@
       { "id": 3, "text": "A type of programming language", "isCorrect": false }
     ]
   },
+
   {
     "category": "Cybersecurity",
     "question": "What is a 'zero-day vulnerability'?",
@@ -485,6 +489,679 @@
       { "id": 1, "text": "Java", "isCorrect": true },
       { "id": 2, "text": "Kotlin", "isCorrect": false },
       { "id": 3, "text": "C#", "isCorrect": false }
+    ]
+  },
+
+  {
+    "category": "Mechanical Engineering",
+    "question": "What does 'CAD' stand for in the context of mechanical design?",
+    "options": [
+      { "id": 0, "text": "Computer-Aided Drafting", "isCorrect": true },
+      { "id": 1, "text": "Complex Assembly Diagram", "isCorrect": false },
+      { "id": 2, "text": "Centralized Automated Design", "isCorrect": false },
+      { "id": 3, "text": "Circuit Analysis and Design", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Mechanical Engineering",
+    "question": "What is the primary function of a 'thermodynamic cycle' in engineering?",
+    "options": [
+      { "id": 0, "text": "To regulate fluid dynamics", "isCorrect": false },
+      {
+        "id": 1,
+        "text": "To convert heat into mechanical work",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "text": "To control electromagnetic fields",
+        "isCorrect": false
+      },
+      { "id": 3, "text": "To analyze structural integrity", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Mechanical Engineering",
+    "question": "What does 'FEA' stand for in structural analysis?",
+    "options": [
+      { "id": 0, "text": "Finite Element Analysis", "isCorrect": true },
+      { "id": 1, "text": "Force Evaluation Algorithm", "isCorrect": false },
+      { "id": 2, "text": "Friction Enhancing Apparatus", "isCorrect": false },
+      { "id": 3, "text": "Fluid Engineering Application", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Mechanical Engineering",
+    "question": "What is the purpose of 'tolerance' in engineering drawings?",
+    "options": [
+      {
+        "id": 0,
+        "text": "To ensure maximum speed in mechanical systems",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "text": "To specify allowable variations in dimensions",
+        "isCorrect": true
+      },
+      { "id": 2, "text": "To reduce material costs", "isCorrect": false },
+      {
+        "id": 3,
+        "text": "To determine the material hardness required",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "category": "Mechanical Engineering",
+    "question": "What is the purpose of a 'gear ratio' in mechanical systems?",
+    "options": [
+      {
+        "id": 0,
+        "text": "To enhance heat dissipation",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "text": "To control torque and rotational speed",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "text": "To increase structural rigidity",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "text": "To optimize fluid flow",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "category": "Civil Engineering",
+    "question": "What does 'CIVIL' stand for in the context of engineering?",
+    "options": [
+      {
+        "id": 0,
+        "text": "Civilian Infrastructure Validation and Integration Layer",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "text": "Construction and Infrastructure Verification and Integration Layer",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "text": "Construction of Infrastructure for Various Industries and Landscapes",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "text": "Civil Engineering involves the design, construction, and maintenance of infrastructure projects.",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "category": "Civil Engineering",
+    "question": "What is the purpose of 'soil compaction' in construction?",
+    "options": [
+      {
+        "id": 0,
+        "text": "To increase the water content in soil",
+        "isCorrect": false
+      },
+      { "id": 1, "text": "To decrease the soil density", "isCorrect": false },
+      {
+        "id": 2,
+        "text": "To increase soil stability and load-bearing capacity",
+        "isCorrect": true
+      },
+      { "id": 3, "text": "To decrease soil fertility", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Civil Engineering",
+    "question": "What is the purpose of a 'retaining wall' in civil construction?",
+    "options": [
+      { "id": 0, "text": "To facilitate water drainage", "isCorrect": false },
+      { "id": 1, "text": "To control air pollution", "isCorrect": false },
+      {
+        "id": 2,
+        "text": "To prevent soil movement and erosion",
+        "isCorrect": true
+      },
+      {
+        "id": 3,
+        "text": "To support the weight of structures",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "category": "Civil Engineering",
+    "question": "What is the primary function of 'geotechnical engineering'?",
+    "options": [
+      {
+        "id": 0,
+        "text": "Designing computer models for construction projects",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "text": "Analyzing the properties of construction materials",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "text": "Studying the behavior of earth materials and their applications in construction",
+        "isCorrect": true
+      },
+      {
+        "id": 3,
+        "text": "Planning construction project timelines",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "category": "Civil Engineering",
+    "question": "What does 'LEED' refer to in sustainable construction?",
+    "options": [
+      {
+        "id": 0,
+        "text": "Leading Environmental Energy Design",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "text": "Low-Emission and Energy-efficient Development",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "text": "Leadership in Energy and Environmental Design",
+        "isCorrect": true
+      },
+      {
+        "id": 3,
+        "text": "Low-Cost Eco-friendly Engineering Development",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "category": "Tuition Selection",
+    "question": "What does 'STEM' stand for in the context of education?",
+    "options": [
+      {
+        "id": 0,
+        "text": "Science, Technology, Economics, and Mathematics",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "text": "Science, Technology, Engineering, and Mathematics",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "text": "Study, Theory, Experiments, and Math",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "text": "Society, Technology, Engineering, and Medicine",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "category": "Tuition Selection",
+    "question": "What is the purpose of 'personalized learning' in education?",
+    "options": [
+      {
+        "id": 0,
+        "text": "Standardized teaching methods for all students",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "text": "Adapting teaching to individual student needs and preferences",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "text": "Rigid curriculum structure without flexibility",
+        "isCorrect": false
+      },
+      { "id": 3, "text": "Group-based learning only", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Tuition Selection",
+    "question": "What is the primary goal of 'project-based learning'?",
+    "options": [
+      {
+        "id": 0,
+        "text": "Focusing solely on theoretical concepts",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "text": "Engaging students through real-world projects and applications",
+        "isCorrect": true
+      },
+      { "id": 2, "text": "Promoting rote memorization", "isCorrect": false },
+      {
+        "id": 3,
+        "text": "Eliminating individual creativity",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "category": "Tuition Selection",
+    "question": "What does 'SAT' refer to in the context of college admissions?",
+    "options": [
+      { "id": 0, "text": "Scholastic Aptitude Test", "isCorrect": true },
+      { "id": 1, "text": "Student Achievement Test", "isCorrect": false },
+      { "id": 2, "text": "Standardized Assessment Tool", "isCorrect": false },
+      { "id": 3, "text": "Scholarship Assessment Test", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Tuition Selection",
+    "question": "What is the purpose of 'formative assessment' in education?",
+    "options": [
+      {
+        "id": 0,
+        "text": "Assessing final student achievements",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "text": "Evaluating student progress and providing ongoing feedback",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "text": "Ranking students based on their abilities",
+        "isCorrect": false
+      },
+      { "id": 3, "text": "Measuring student intelligence", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Nurse Selection",
+    "question": "What does 'RN' stand for in the healthcare field?",
+    "options": [
+      { "id": 0, "text": "Registered Nutritionist", "isCorrect": false },
+      { "id": 1, "text": "Residency Nurse", "isCorrect": false },
+      { "id": 2, "text": "Registered Nurse", "isCorrect": true },
+      { "id": 3, "text": "Rehabilitation Nurse", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Nurse Selection",
+    "question": "What is the purpose of 'patient assessment' in nursing?",
+    "options": [
+      { "id": 0, "text": "Diagnosing medical conditions", "isCorrect": false },
+      { "id": 1, "text": "Creating treatment plans", "isCorrect": false },
+      {
+        "id": 2,
+        "text": "Evaluating and documenting a patient's health status",
+        "isCorrect": true
+      },
+      { "id": 3, "text": "Administering medications", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Nurse Selection",
+    "question": "What is the primary function of a 'care plan' in nursing?",
+    "options": [
+      {
+        "id": 0,
+        "text": "Providing insurance information",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "text": "Scheduling patient appointments",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "text": "Outlining individualized patient care goals and interventions",
+        "isCorrect": true
+      },
+      {
+        "id": 3,
+        "text": "Creating medical billing reports",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "category": "Nurse Selection",
+    "question": "What does 'HIPAA' stand for in healthcare compliance?",
+    "options": [
+      {
+        "id": 0,
+        "text": "Health Information Protection and Accountability Act",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "text": "Healthcare Information Privacy and Assurance Act",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "text": "Health Insurance Portability and Accountability Act",
+        "isCorrect": true
+      },
+      {
+        "id": 3,
+        "text": "Healthcare Information Protection and Accessibility Act",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "category": "Nurse Selection",
+    "question": "What is the purpose of 'vital signs' monitoring in patient care?",
+    "options": [
+      { "id": 0, "text": "Tracking patient appointments", "isCorrect": false },
+      {
+        "id": 1,
+        "text": "Assessing and recording important physiological measurements",
+        "isCorrect": true
+      },
+      { "id": 2, "text": "Creating patient meal plans", "isCorrect": false },
+      { "id": 3, "text": "Scheduling surgical procedures", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Aeronautical Engineering",
+    "question": "What does 'Aerofoil' refer to in aerodynamics?",
+    "options": [
+      { "id": 0, "text": "A type of aircraft engine", "isCorrect": false },
+      {
+        "id": 1,
+        "text": "A wing-like structure designed to provide lift",
+        "isCorrect": true
+      },
+      { "id": 2, "text": "A navigation instrument", "isCorrect": false },
+      { "id": 3, "text": "An aviation safety protocol", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Aeronautical Engineering",
+    "question": "What is the primary purpose of 'wind tunnel testing' in aeronautical design?",
+    "options": [
+      {
+        "id": 0,
+        "text": "To simulate flight conditions for passengers",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "text": "To assess the aerodynamic properties of aircraft models",
+        "isCorrect": true
+      },
+      { "id": 2, "text": "To predict weather patterns", "isCorrect": false },
+      { "id": 3, "text": "To measure air traffic density", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Aeronautical Engineering",
+    "question": "What does 'Stall' mean in aviation?",
+    "options": [
+      {
+        "id": 0,
+        "text": "A type of in-flight entertainment",
+        "isCorrect": false
+      },
+      { "id": 1, "text": "A rapid ascent of an aircraft", "isCorrect": false },
+      {
+        "id": 2,
+        "text": "A loss of lift due to high angle of attack",
+        "isCorrect": true
+      },
+      {
+        "id": 3,
+        "text": "A maneuver to change flight direction",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "category": "Aeronautical Engineering",
+    "question": "What is the primary function of a 'horizontal stabilizer' on an aircraft?",
+    "options": [
+      {
+        "id": 0,
+        "text": "To steer the aircraft left or right",
+        "isCorrect": false
+      },
+      { "id": 1, "text": "To provide lift during takeoff", "isCorrect": false },
+      {
+        "id": 2,
+        "text": "To maintain stability and control pitch",
+        "isCorrect": true
+      },
+      {
+        "id": 3,
+        "text": "To control altitude during descent",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "category": "Aeronautical Engineering",
+    "question": "What does 'Mach number' indicate in aerodynamics?",
+    "options": [
+      { "id": 0, "text": "Aircraft engine power output", "isCorrect": false },
+      {
+        "id": 1,
+        "text": "Aircraft speed relative to the speed of sound",
+        "isCorrect": true
+      },
+      { "id": 2, "text": "Aircraft weight distribution", "isCorrect": false },
+      {
+        "id": 3,
+        "text": "Aircraft altitude above sea level",
+        "isCorrect": false
+      }
+    ]
+  },
+
+  {
+    "category": "Electrical Technician Selection",
+    "question": "What does 'AC' stand for in electrical engineering?",
+    "options": [
+      { "id": 0, "text": "Alternative Current", "isCorrect": true },
+      { "id": 1, "text": "Automatic Circuit", "isCorrect": false },
+      { "id": 2, "text": "Ampere Calculation", "isCorrect": false },
+      { "id": 3, "text": "Active Conductor", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Electrical Technician Selection",
+    "question": "What is the primary function of a 'circuit breaker' in electrical systems?",
+    "options": [
+      {
+        "id": 0,
+        "text": "Regulating voltage fluctuations",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "text": "Preventing electrical overloads and short circuits",
+        "isCorrect": true
+      },
+      { "id": 2, "text": "Controlling current flow", "isCorrect": false },
+      { "id": 3, "text": "Storing electrical energy", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Electrical Technician Selection",
+    "question": "What does 'Ohm's Law' describe in electrical circuits?",
+    "options": [
+      {
+        "id": 0,
+        "text": "The relationship between voltage and current",
+        "isCorrect": true
+      },
+      {
+        "id": 1,
+        "text": "The behavior of magnetic fields in conductors",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "text": "The measurement of electrical resistance",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "text": "The principle of electrical induction",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "category": "Electrical Technician Selection",
+    "question": "What is the purpose of a 'transformer' in electrical systems?",
+    "options": [
+      {
+        "id": 0,
+        "text": "To convert electrical energy into mechanical energy",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "text": "To step up or step down voltage levels",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "text": "To regulate electrical frequency",
+        "isCorrect": false
+      },
+      { "id": 3, "text": "To store electrical charge", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Electrical Technician Selection",
+    "question": "What does 'DC' refer to in electrical circuits?",
+    "options": [
+      { "id": 0, "text": "Direct Capacitance", "isCorrect": false },
+      { "id": 1, "text": "Digital Circuitry", "isCorrect": false },
+      { "id": 2, "text": "Direct Current", "isCorrect": true },
+      { "id": 3, "text": "Dynamic Charge", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Accountant Selection",
+    "question": "What is the primary purpose of a 'balance sheet' in accounting?",
+    "options": [
+      {
+        "id": 0,
+        "text": "Recording day-to-day financial transactions",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "text": "Summarizing a company's financial position at a specific time",
+        "isCorrect": true
+      },
+      { "id": 2, "text": "Analyzing market trends", "isCorrect": false },
+      { "id": 3, "text": "Forecasting future profits", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Accountant Selection",
+    "question": "What does 'GAAP' stand for in accounting standards?",
+    "options": [
+      {
+        "id": 0,
+        "text": "Global Accounting Assessment Protocol",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "text": "Generally Accepted Accounting Principles",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "text": "General Asset Allocation Policy",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "text": "Governmental Audit and Assurance Practices",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "category": "Accountant Selection",
+    "question": "What is the purpose of 'depreciation' in accounting?",
+    "options": [
+      { "id": 0, "text": "Increasing the value of assets", "isCorrect": false },
+      { "id": 1, "text": "Calculating tax deductions", "isCorrect": false },
+      {
+        "id": 2,
+        "text": "Allocating the cost of an asset over its useful life",
+        "isCorrect": true
+      },
+      { "id": 3, "text": "Determining profit margins", "isCorrect": false }
+    ]
+  },
+  {
+    "category": "Accountant Selection",
+    "question": "What is the purpose of an 'income statement' in financial reporting?",
+    "options": [
+      {
+        "id": 0,
+        "text": "Listing company assets and liabilities",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "text": "Providing a summary of revenue and expenses over a period",
+        "isCorrect": true
+      },
+      { "id": 2, "text": "Detailing cash flow movements", "isCorrect": false },
+      {
+        "id": 3,
+        "text": "Forecasting future business growth",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "category": "Accountant Selection",
+    "question": "What is 'auditing' in the context of accounting?",
+    "options": [
+      {
+        "id": 0,
+        "text": "Predicting future market trends",
+        "isCorrect": false
+      },
+      {
+        "id": 1,
+        "text": "Assessing financial statements for accuracy and compliance",
+        "isCorrect": true
+      },
+      { "id": 2, "text": "Creating financial reports", "isCorrect": false },
+      { "id": 3, "text": "Managing investment portfolios", "isCorrect": false }
     ]
   }
 ]

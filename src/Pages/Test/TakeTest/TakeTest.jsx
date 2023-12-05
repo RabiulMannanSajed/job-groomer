@@ -5,9 +5,10 @@ import TestTaken from "../TestTaken/TestTaken";
 const TakeTest = () => {
   // set those match que
   const [examQues, setExamQues] = useState([]);
-  const { jobName } = useParams();
+  const { jobName } = useParams(); // this is taking then job name u clicked
   // lodaing from router
-  const que = useLoaderData();
+  const que = useLoaderData(); // this is  taken an api name que.json
+  // if job name is == to our que.json (category) then show those que for exam
   useEffect(() => {
     const ques = que.filter((data) => data.category == jobName);
     setExamQues(ques);

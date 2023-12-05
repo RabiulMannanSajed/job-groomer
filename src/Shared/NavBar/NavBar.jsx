@@ -80,7 +80,7 @@ const NavBar = () => {
             placeholder="Search by category"
           />
         </div>
-        <label htmlFor="my_modal_6" className="btn btn-sm">
+        <label htmlFor="my_modal_6" className="btn btn-sm ml-3">
           Search
         </label>
         <input type="checkbox" id="my_modal_6" className="modal-toggle" />
@@ -96,6 +96,12 @@ const NavBar = () => {
                     </p>
 
                     <p className="text-black"> {item.jobTitle}</p>
+                    <Link
+                      to={`/jobInfo/${item._id} `}
+                      className="btn btn-warning mt-5"
+                    >
+                      See Details
+                    </Link>
                   </div>
                 ))
               ) : (
@@ -109,9 +115,6 @@ const NavBar = () => {
             </div>
           </div>
         </div>
-        <button className="btn btn-success rounded-0 py-4 px-lg-5 d-none d-lg-block">
-          APPOINTMENT
-        </button>
       </div>
     </div>
   );

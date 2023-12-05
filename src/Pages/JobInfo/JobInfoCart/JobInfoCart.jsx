@@ -113,7 +113,7 @@ const JobInfoCart = ({ dataOfJob }) => {
           )}
         </div>
         <Link to={`/takeTest/${jobName}`}>
-          <div className="items-center btn btn-neutral">Apply </div>
+          <div className="items-center btn btn-neutral">Take a test </div>
         </Link>
       </div>
       <OfficeLocation locValue={locValue}></OfficeLocation>
