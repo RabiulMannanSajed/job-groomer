@@ -35,11 +35,12 @@ const TestTaken = ({ examQues }) => {
     <div className="text-center m-20">
       {showResults ? (
         <div>
-          {score < 2 ? (
+          {score < 3 ? (
             <div>
               <p className="text-red-500 font-extrabold text-2xl">
                 Not a good result !
               </p>
+              <p>see those link</p>
             </div>
           ) : (
             <div>

@@ -6,7 +6,7 @@ const NavBar = () => {
   const [filteredItem, setFilterItem] = useState([]);
 
   useEffect(() => {
-    fetch("office.json")
+    fetch("http://localhost:5000/office")
       .then((res) => res.json())
       .then((data) => setJobSearch(data));
   }, []);

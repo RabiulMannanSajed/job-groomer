@@ -21,12 +21,12 @@ export const router = createBrowserRouter([
       {
         path: "/jobInfo/:id",
         element: <JobInfo></JobInfo>,
-        loader: () => fetch("/office.json"),
+        loader: () => fetch("http://localhost:5000/office"),
       },
       {
         path: "/takeTest/:jobName",
         element: <TakeTest></TakeTest>,
-        loader: () => fetch("/que.json"),
+        loader: () => fetch("http://localhost:5000/ques"),
       },
     ],
   },

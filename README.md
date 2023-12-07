@@ -14,3 +14,6 @@
 search is apply only in home page by use Location if location is home then show the search or don't show it
 
 - login is not apply yet do it for login without login u never apply for job
+
+* connect to firebase
+* npm install firebase
