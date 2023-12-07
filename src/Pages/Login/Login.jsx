@@ -9,13 +9,13 @@ const Login = () => {
   // event is work to take value form input
   const handelLogin = (event) => {
     event.preventDefault(); // stop page to reload
-    const form = event.target;
+    const form = event.target; // take the value form input
     const email = form.email.value;
-    const password = form.password;
+    const password = form.password.value;
     signIn(email, password).then((result) => {
       const user = result.user;
-      console.log(user);
-      Swal.fire("Successfully Login");
+      console.log(result);
+      Swal.fire("successFully Login");
     });
   };
   return (

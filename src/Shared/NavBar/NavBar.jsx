@@ -1,10 +1,21 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/img/jobentryLogo.png";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
 const NavBar = () => {
+  const { user, logOut } = useContext(AuthContext);
   const [jobSearch, setJobSearch] = useState([]);
   const [filteredItem, setFilterItem] = useState([]);
 
+  // this is for logOut
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        Swal.fire("Successfully logOut");
+      })
+      .catch((error) => console.log(error));
+  };
   useEffect(() => {
     fetch("http://localhost:5000/office")
       .then((res) => res.json())
@@ -29,9 +40,20 @@ const NavBar = () => {
       <li className="text-green-500 hover:text-black text-xl">
         <Link to="/about">About</Link>
       </li>
-      <li className="text-green-500 hover:text-black text-xl">
-        <Link to="/login">Login</Link>
-      </li>
+      {user ? (
+        <>
+          <button onClick={handleLogOut} className="btn btn-active btn-ghost">
+            LogOut
+          </button>
+        </>
+      ) : (
+        <>
+          {" "}
+          <li className="text-green-500 hover:text-black text-xl">
+            <Link to="/login">Login</Link>
+          </li>
+        </>
+      )}
     </>
   );
   return (

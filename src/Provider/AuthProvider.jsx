@@ -1,8 +1,10 @@
 import { createContext, useEffect, useState } from "react";
 import {
+  createUserWithEmailAndPassword,
   getAuth,
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  signOut,
 } from "firebase/auth";
 import { app } from "../firebase/firebase.config";
 
@@ -12,10 +14,10 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  // this is sighUp When the user first come
+  // this is create the user first time
   const createUser = (email, password) => {
     setLoading(true);
-    return signInWithEmailAndPassword(auth, email, password);
+    return createUserWithEmailAndPassword(auth, email, password);
   };
 
   // this is for login
@@ -26,12 +28,13 @@ const AuthProvider = ({ children }) => {
 
   const logOut = () => {
     setLoading(true);
-    logOut(auth);
+    return signOut(auth);
   };
   //
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
+      console.log("current user", currentUser);
       setLoading(false);
     });
     return () => {
