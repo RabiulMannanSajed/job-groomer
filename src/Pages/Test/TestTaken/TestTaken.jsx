@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 // import { unstable_HistoryRouter } from "react-router-dom";
 
 // TODo// this is rest for rafi
@@ -103,6 +103,16 @@ const TestTaken = ({ examQues }) => {
               </li>
             ))}
           </ul>
+          {score >= 1 ? (
+            // this part will private if the user is not login take him to login page then return him the apply page
+            <>
+              <Link to="/apply">
+                <button className="btn btn-success mt-5">Apply</button>{" "}
+              </Link>
+            </>
+          ) : (
+            <></>
+          )}
         </div>
       )}
     </div>
