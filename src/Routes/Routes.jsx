@@ -4,6 +4,8 @@ import Home from "../Pages/Home/Home/Home";
 import Jobs from "../Pages/Job/Jobs/Jobs";
 import JobInfo from "../Pages/JobInfo/JobInfo/JobInfo";
 import TakeTest from "../Pages/Test/TakeTest/TakeTest";
+import Login from "../Pages/Login/Login";
+import SignUp from "../SignUp/SignUp";
 
 export const router = createBrowserRouter([
   {
@@ -27,6 +29,14 @@ export const router = createBrowserRouter([
         path: "/takeTest/:jobName",
         element: <TakeTest></TakeTest>,
         loader: () => fetch("http://localhost:5000/ques"),
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/signup",
+        element: <SignUp></SignUp>,
       },
     ],
   },

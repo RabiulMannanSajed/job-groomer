@@ -30,7 +30,7 @@ const NavBar = () => {
         <Link to="/about">About</Link>
       </li>
       <li className="text-green-500 hover:text-black text-xl">
-        <Link>jobs</Link>
+        <Link to="/login">Login</Link>
       </li>
     </>
   );

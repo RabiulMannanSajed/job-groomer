@@ -17,3 +17,6 @@ search is apply only in home page by use Location if location is home then show 
 
 * connect to firebase
 * npm install firebase
+
+* react Hook Form
+* npm install react-hook-form
