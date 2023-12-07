@@ -7,7 +7,6 @@ import TakeTest from "../Pages/Test/TakeTest/TakeTest";
 import Login from "../Pages/Login/Login";
 import SignUp from "../SignUp/SignUp";
 import Apply from "../Pages/Apply/Apply";
-import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -42,11 +41,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/apply",
-        element: (
-          <PrivateRoute>
-            <Apply></Apply>
-          </PrivateRoute>
-        ),
+        element: <Apply></Apply>,
       },
     ],
   },
