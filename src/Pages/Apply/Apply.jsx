@@ -10,6 +10,7 @@ const Apply = () => {
     const experience = form.experience.value;
     const yearOfExp = form.yearOfExp.value;
     const companyName = form.companyName.value;
+    // send those data the data base
     console.log(
       fullName,
       country,
