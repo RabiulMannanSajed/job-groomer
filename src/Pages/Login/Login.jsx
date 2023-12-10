@@ -8,9 +8,8 @@ const Login = () => {
 
   const navigate = useNavigate();
   const location = useLocation();
-
+  const from = location.state?.from?.pathname || "/";
   // if there previous path is avilable then take there otherWise take him to home page
-  const from = location.state?.from?.pathName || "/";
   // event is work to take value form input
   const handelLogin = (event) => {
     event.preventDefault(); // stop page to reload
@@ -18,12 +17,11 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
     signIn(email, password).then((result) => {
-      const user = result.user;
       console.log(result);
       Swal.fire("successFully Login");
 
       // after login then navigate them to the prev page
-      navigate(form, { replace: true });
+      navigate(from, { replace: true });
     });
   };
   return (

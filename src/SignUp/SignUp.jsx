@@ -21,10 +21,27 @@ const SignUp = () => {
 
       updateUserProfile(data.name)
         .then(() => {
-          console.log("user profile update");
-          reset();
-          Swal.fire("User Created successfully");
-          navigate("/");
+          const saveUser = {
+            name: data.name,
+            email: data.email,
+          };
+          // send data to the backend
+          fetch("http://localhost:5000/users", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(saveUser),
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              if (data.insertedId) {
+                console.log("user profile update");
+                reset();
+                Swal.fire("User Created successfully");
+                navigate("/");
+              }
+            });
         })
         .catch((error) => console.log(error));
     });
@@ -34,7 +51,7 @@ const SignUp = () => {
   return (
     <div className="hero min-h-screen bg-base-200 mb-10">
       <div className="">
-        <h1 className="mb-10 text-5xl font-bold">Login now!</h1>
+        <h1 className="mb-10 text-5xl font-bold">SignUp now!</h1>
         <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           <form onSubmit={handleSubmit(onSubmit)} className="card-body">
             <div className="form-control">
@@ -60,7 +77,7 @@ const SignUp = () => {
                   required: true,
                   pattern: {
                     /* TODO : cnage the bscse */
-                    value: /\S+@bscse\.uiu\.ac\.bd$/,
+                    value: /\S+@gmail\.com$/,
                     message: "Entered value does not match email format",
                   },
                 })}

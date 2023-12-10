@@ -1,8 +1,11 @@
+import Swal from "sweetalert2";
+
 const Apply = () => {
   const handleApplyInfo = (event) => {
     event.preventDefault();
     const form = event.target;
     const fullName = form.fullName.value;
+    const email = form.email.value;
     const country = form.country.value;
     const city = form.city.value;
     const institute = form.institute.value;
@@ -21,6 +24,29 @@ const Apply = () => {
       yearOfExp,
       companyName
     );
+    const applicantInfo = {
+      name: fullName,
+      email: email,
+      address: [country, city],
+      institute: institute,
+      passYear: passYear,
+      experience: experience,
+      yearOfExp: yearOfExp,
+      companyName: companyName,
+    };
+    fetch("http://localhost:5000/apply", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(applicantInfo),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          Swal.fire("User created successfully");
+        }
+      });
   };
   return (
     <div className=" bg-base-200">
@@ -40,7 +66,19 @@ const Apply = () => {
               <input
                 type="name"
                 placeholder="Enter your Full Name"
-                name="fullName"
+                name="email"
+                className="input input-bordered"
+                required
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text font-bold text-xl">Email </span>
+              </label>
+              <input
+                type="name"
+                placeholder="Enter your Valid email"
+                name="email"
                 className="input input-bordered"
                 required
               />
