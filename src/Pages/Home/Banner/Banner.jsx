@@ -27,16 +27,6 @@ const Banner = () => {
               There are many variations of passages of available, but the
               majority have suffered alteration in some form
             </p>
-            <div className="flex">
-              <div data-aos="fade-right" data-aos-offset="300">
-                <button className="btn btn-success text-xl mr-3">
-                  Search A Job
-                </button>
-              </div>
-              <div data-aos="fade-left" data-aos-offset="300">
-                <button className="btn btn-info text-xl ">Find A Talent</button>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -92,16 +82,6 @@ const Banner = () => {
               There are many variations of passages of available, but the
               majority have suffered alteration in some form
             </p>
-            <div className="flex">
-              <div data-aos="fade-right" data-aos-offset="300">
-                <button className="btn btn-success text-xl mr-3">
-                  Search A Job
-                </button>
-              </div>
-              <div data-aos="fade-left" data-aos-offset="300">
-                <button className="btn btn-info text-xl ">Find A Talent</button>
-              </div>
-            </div>
           </div>
         </div>
         <div className="absolute flex transform mr-5 right-5 bottom-5">
@@ -125,16 +105,6 @@ const Banner = () => {
               There are many variations of passages of available, but the
               majority have suffered alteration in some form
             </p>
-            <div className="flex">
-              <div data-aos="fade-right" data-aos-offset="300">
-                <button className="btn btn-success text-xl mr-3">
-                  Search A Job
-                </button>
-              </div>
-              <div data-aos="fade-left" data-aos-offset="300">
-                <button className="btn btn-info text-xl ">Find A Talent</button>
-              </div>
-            </div>
           </div>
         </div>
         <div className="absolute flex transform mr-5 right-5 bottom-5">

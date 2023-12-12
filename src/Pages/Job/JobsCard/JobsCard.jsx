@@ -5,9 +5,13 @@ import {
   faMoneyBill1,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const JobsCard = ({ job }) => {
+  const { user } = useContext(AuthContext);
   const {
     companyName,
     companyLogo,
@@ -18,6 +22,33 @@ const JobsCard = ({ job }) => {
     startDate,
     _id,
   } = job;
+  const handleComment = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const comment = form.comment.value;
+    console.log(comment);
+    console.log(companyName);
+    console.log(user?.email);
+    const commentInfo = {
+      comment: comment,
+      commentOnComp: companyName,
+      commentator: user?.email,
+    };
+    fetch(`http://localhost:5000/comment`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(commentInfo),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          Swal.fire("User created successfully");
+        }
+      });
+    comment.value = "";
+  };
   return (
     <div className="border-spacing-16 shadow-xl p-5 rounded">
       {/* here take the company name and the logo  */}
@@ -69,6 +100,33 @@ const JobsCard = ({ job }) => {
       <Link to={`/jobInfo/${_id}`}>
         <button className="btn btn-warning sticky ">View Details</button>
       </Link>
+
+      {/* this is for doing comment  */}
+      <div>
+        <form onSubmit={handleComment}>
+          <label className="label">
+            <span className="label-text font-bold text-xl">Comment </span>
+          </label>
+          <input
+            type="name"
+            placeholder="Comment "
+            name="comment"
+            className="input input-bordered"
+            required
+          />
+          <div className="flex justify-between ">
+            <div className=" mt-6">
+              <input className="btn btn-warning" type="submit" value="→" />
+            </div>
+            <Link to={`/viewComment/${companyName}`}>
+              <div className="mt-5">
+                <div className="btn btn-info">view Comment </div>
+              </div>
+            </Link>
+          </div>
+        </form>
+      </div>
+      {/* this is for view comment */}
     </div>
   );
 };

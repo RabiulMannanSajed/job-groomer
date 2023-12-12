@@ -10,7 +10,7 @@ const Jobs = () => {
   }, []);
   return (
     <div>
-      <div className="items-center justify-center">
+      <div className="text-center text-xl ">
         <h1 className="text-xl font-bold">Internships</h1>
         <p>as per your preferences</p>
       </div>

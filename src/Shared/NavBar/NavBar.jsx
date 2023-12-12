@@ -41,6 +41,17 @@ const NavBar = () => {
         <Link to="/about">About</Link>
       </li>
       {user ? (
+        // if user then it work
+        <>
+          <li>
+            <Link to="/dashboard/userHome">See more Info</Link>
+          </li>
+        </>
+      ) : (
+        /* if user not this time don't show  */
+        <></>
+      )}
+      {user ? (
         <>
           <button onClick={handleLogOut} className="btn btn-active btn-ghost">
             LogOut
@@ -54,6 +65,9 @@ const NavBar = () => {
           </li>
         </>
       )}
+      <li className="text-green-500 hover:text-black text-xl">
+        <Link to="/seeTutorial">See Tutorial </Link>
+      </li>{" "}
     </>
   );
   return (

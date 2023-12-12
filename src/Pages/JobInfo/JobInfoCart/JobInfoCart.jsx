@@ -9,7 +9,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./JobInfoCart.css";
 import OfficeLocation from "../../../Shared/OfficeLocation/OfficeLocation";
 import { Link } from "react-router-dom";
-const JobInfoCart = ({ dataOfJob }) => {
+
+const JobInfoCart = ({ dataOfJob, id }) => {
+  console.log("job ID", id);
   const {
     companyName,
     companyLogo,
@@ -25,6 +27,7 @@ const JobInfoCart = ({ dataOfJob }) => {
     jobName,
   } = dataOfJob;
   const locValue = location;
+  console.log(locValue);
   return (
     <div>
       <h1 className="text-2xl font-bold text-center m-5">{jobTitle}</h1>
@@ -112,7 +115,7 @@ const JobInfoCart = ({ dataOfJob }) => {
             <p>No skills specified</p>
           )}
         </div>
-        <Link to={`/takeTest/${jobName}`}>
+        <Link to={`/takeTest/${jobName}?id=${id}`}>
           <div className="items-center btn btn-neutral">Take a test </div>
         </Link>
       </div>

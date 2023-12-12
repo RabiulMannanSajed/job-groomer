@@ -7,6 +7,14 @@ import TakeTest from "../Pages/Test/TakeTest/TakeTest";
 import Login from "../Pages/Login/Login";
 import SignUp from "../SignUp/SignUp";
 import Apply from "../Pages/Apply/Apply";
+import Dashboard from "../layout/Dashboard";
+import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
+import PostAjob from "../Pages/PostAjob/PostAjob";
+import AdminHome from "../Pages/Dashboard/AdminHome/AdminHome";
+import UserHome from "../Pages/Dashboard/UserHome/UserHome";
+import ViewComment from "../Pages/ViewComment/ViewComment";
+import AddTutorial from "../Pages/Dashboard/AddTutorial/AddTutorial";
+import SeeTutorial from "../Pages/SeeTutorial/SeeTutorial";
 
 export const router = createBrowserRouter([
   {
@@ -16,6 +24,10 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/postAJob",
+        element: <PostAjob></PostAjob>,
       },
       {
         path: "/jobs",
@@ -32,6 +44,11 @@ export const router = createBrowserRouter([
         loader: () => fetch("http://localhost:5000/ques"),
       },
       {
+        path: "/apply/:jobName",
+        element: <Apply></Apply>,
+        loader: () => fetch("http://localhost:5000/office"),
+      },
+      {
         path: "/login",
         element: <Login></Login>,
       },
@@ -42,6 +59,37 @@ export const router = createBrowserRouter([
       {
         path: "/apply",
         element: <Apply></Apply>,
+      },
+      {
+        path: "/viewComment/:companyName",
+        element: <ViewComment></ViewComment>,
+        loader: () => fetch("http://localhost:5000/comment"),
+      },
+      {
+        path: "/seeTutorial",
+        element: <SeeTutorial></SeeTutorial>,
+      },
+    ],
+  },
+  {
+    path: "dashboard",
+    element: <Dashboard></Dashboard>,
+    children: [
+      {
+        path: "allUsers",
+        element: <AllUsers></AllUsers>,
+      },
+      {
+        path: "adminHome",
+        element: <AdminHome></AdminHome>,
+      },
+      {
+        path: "userHome",
+        element: <UserHome></UserHome>,
+      },
+      {
+        path: "addTutorial",
+        element: <AddTutorial></AddTutorial>,
       },
     ],
   },

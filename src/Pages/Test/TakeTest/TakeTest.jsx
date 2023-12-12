@@ -6,7 +6,7 @@ const TakeTest = () => {
   // set those match que
   const [examQues, setExamQues] = useState([]);
   const { jobName } = useParams(); // this is taking then job name u clicked
-  // lodaing from router
+  // loading from router
   const que = useLoaderData(); // this is  taken an api name que.json
   // if job name is == to our que.json (category) then show those que for exam
   useEffect(() => {
@@ -17,7 +17,7 @@ const TakeTest = () => {
 
   return (
     <div>
-      <TestTaken examQues={examQues}></TestTaken>
+      <TestTaken examQues={examQues} jobName={jobName}></TestTaken>
     </div>
   );
 };

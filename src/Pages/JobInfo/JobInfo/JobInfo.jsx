@@ -15,7 +15,7 @@ const JobInfo = () => {
   }, [id, jobInfo]);
   return (
     <div>
-      <JobInfoCart dataOfJob={dataOfJob}></JobInfoCart>
+      <JobInfoCart dataOfJob={dataOfJob} id={id}></JobInfoCart>
     </div>
   );
 };

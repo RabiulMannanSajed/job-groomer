@@ -1,14 +1,23 @@
-import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-// import { unstable_HistoryRouter } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../../Provider/AuthProvider";
 
-// TODo// this is rest for rafi
-const TestTaken = ({ examQues }) => {
+const TestTaken = ({ examQues, jobName }) => {
+  // this is use to take the id
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const id = searchParams.get("id");
+  console.log("id from testTaken", id);
+
+  // this take the track of the  user
+  const { user } = useContext(AuthContext);
+  /* this is fro his prev location and if he is not login then take him to 
+  login page after that take him to his page  */
+  const navigate = useNavigate();
+  console.log("this is job name ", jobName);
   const [showResults, setShowResults] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
-
-  const navigate = useNavigate();
 
   const handleOptionClick = (isCorrect) => {
     if (isCorrect) {
@@ -106,9 +115,22 @@ const TestTaken = ({ examQues }) => {
           {score >= 1 ? (
             // this part will private if the user is not login take him to login page then return him the apply page
             <>
-              <Link to="/apply">
-                <button className="btn btn-success mt-5">Apply</button>{" "}
-              </Link>
+              {user && user?.email ? (
+                <>
+                  {/* TODO take the company name user applying */}
+                  <Link to={`/apply/${jobName}?id=${id}`}>
+                    <div className="btn btn-success mt-5">Apply</div>{" "}
+                  </Link>
+                </>
+              ) : (
+                <>
+                  <Link to="/login">
+                    <button className="btn btn-success mt-5">
+                      Place login to Apply{" "}
+                    </button>
+                  </Link>
+                </>
+              )}
             </>
           ) : (
             <></>
