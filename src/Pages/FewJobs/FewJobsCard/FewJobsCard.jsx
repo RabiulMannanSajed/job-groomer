@@ -7,27 +7,22 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import Modal from "react-modal";
-
+import { AuthContext } from "../../../Provider/AuthProvider";
 import useComment from "../../../hooks/useComment";
 
-const JobsCard = ({ job }) => {
-  const { user } = useContext(AuthContext);
-  const [talk] = useComment();
-  const [companyComments, setCompanyComments] = useState([]);
+const FewJobsCard = ({ job }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [comments, setUserComments] = useState([]);
-
   const [comment] = useComment();
-
   useEffect(() => {
     const usersComment = comment.filter(
       (userComments) => userComments.commentOnComp == companyName
     );
     setUserComments(usersComment);
   }, [comment]);
+
   const openModal = () => {
     setModalIsOpen(true);
   };
@@ -35,6 +30,8 @@ const JobsCard = ({ job }) => {
   const closeModal = () => {
     setModalIsOpen(false);
   };
+
+  const { user } = useContext(AuthContext);
   const {
     companyName,
     stipend,
@@ -44,15 +41,8 @@ const JobsCard = ({ job }) => {
     startDate,
     _id,
   } = job;
-  useEffect(() => {
-    const commentOnComp = talk.filter(
-      (talkOnComp) => talkOnComp.commentOnComp === companyName
-    );
-    setCompanyComments(commentOnComp);
-  }, [companyName, talk]);
-
+  console.log("See the job", job);
   const handleComment = (event) => {
-    event.preventDefault();
     const form = event.target;
     const comment = form.comment.value;
     console.log(comment);
@@ -73,14 +63,10 @@ const JobsCard = ({ job }) => {
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
-          Swal.fire("User created successfully");
+          Swal.fire("Commented");
         }
       });
-    form.comment.value = "";
   };
-
-  // this is for search
-
   return (
     <div className="border-spacing-16 shadow-xl p-5 rounded">
       {/* here take the company name and the logo  */}
@@ -127,7 +113,7 @@ const JobsCard = ({ job }) => {
       </div>
 
       <Link to={`/jobInfo/${_id}`}>
-        <button className="btn btn-warning sticky font-bold text-lg">
+        <button className="btn btn-warning sticky font-bold text-lg ">
           View Details
         </button>
       </Link>
@@ -138,9 +124,7 @@ const JobsCard = ({ job }) => {
           <div>
             <form onSubmit={handleComment}>
               <label className="label">
-                <span className="label-text font-bold text-xl mb-5">
-                  Comment{" "}
-                </span>
+                <span className="label-text font-bold text-xl">Comment </span>
               </label>
               <input
                 type="name"
@@ -195,4 +179,4 @@ const JobsCard = ({ job }) => {
   );
 };
 
-export default JobsCard;
+export default FewJobsCard;

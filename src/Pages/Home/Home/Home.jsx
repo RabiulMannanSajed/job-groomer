@@ -1,7 +1,6 @@
-import Jobs from "../../Job/Jobs/Jobs";
+import FewJobs from "../../FewJobs/FewJobs/FewJobs";
 import Banner from "../Banner/Banner";
 import Info from "../Info/Info";
-import Search from "../Search/Search";
 import TalentAndJob from "../TalentAndJob/TalentAndJob";
 
 const Home = () => {
@@ -11,7 +10,7 @@ const Home = () => {
       {/* <Search></Search> */}
       <TalentAndJob></TalentAndJob>
       <Info></Info>
-      <Jobs></Jobs>
+      <FewJobs></FewJobs>
     </div>
   );
 };

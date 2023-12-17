@@ -15,6 +15,8 @@ import UserHome from "../Pages/Dashboard/UserHome/UserHome";
 import ViewComment from "../Pages/ViewComment/ViewComment";
 import AddTutorial from "../Pages/Dashboard/AddTutorial/AddTutorial";
 import SeeTutorial from "../Pages/SeeTutorial/SeeTutorial";
+import FewJobs from "../Pages/FewJobs/FewJobs/FewJobs";
+import MakeQue from "../Pages/Dashboard/MakeQue/MakeQue";
 
 export const router = createBrowserRouter([
   {
@@ -28,6 +30,10 @@ export const router = createBrowserRouter([
       {
         path: "/postAJob",
         element: <PostAjob></PostAjob>,
+      },
+      {
+        path: "/fewJobs",
+        element: <FewJobs></FewJobs>,
       },
       {
         path: "/jobs",
@@ -63,10 +69,10 @@ export const router = createBrowserRouter([
       {
         path: "/viewComment/:companyName",
         element: <ViewComment></ViewComment>,
-        loader: () => fetch("http://localhost:5000/comment"),
+        loader: () => fetch("http://localhost:5000/talk"),
       },
       {
-        path: "/seeTutorial",
+        path: "/seeTutorial/:jobName",
         element: <SeeTutorial></SeeTutorial>,
       },
     ],
@@ -90,6 +96,10 @@ export const router = createBrowserRouter([
       {
         path: "addTutorial",
         element: <AddTutorial></AddTutorial>,
+      },
+      {
+        path: "makeQue",
+        element: <MakeQue></MakeQue>,
       },
     ],
   },

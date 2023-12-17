@@ -3,12 +3,6 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 
 const PostAjob = () => {
-  // this is add in office API
-  // and take full details
-  //   TODO: make post Api in server site
-  // user Email is the the admin email amd role Admin
-  // Email and role is going (User API with full info {name,email,role,companyName })
-
   const { user } = useContext(AuthContext);
   const handlePostAJob = (event) => {
     event.preventDefault();
@@ -40,20 +34,7 @@ const PostAjob = () => {
       skills: skills,
       whoApply: whoApply,
     };
-    /*  console.log("Company Name:", companyName);
-    console.log("Job Name:", jobName);
-    console.log("Job Title:", jobTitle);
-    console.log("Duration:", duration);
-    console.log("Stipend:", stipend);
-    console.log("Start Date:", startDate);
-    console.log("Experience:", experience);
-    console.log("Work From:", workFrom);
-    console.log("About The Work:", aboutTheWork);
-    console.log(user?.email);
-    console.log();
-    // Log and use the arrays
-    console.log("Skills:", skills);
-    console.log("Who Apply:", whoApply); */
+
     fetch("http://localhost:5000/office", {
       method: "POST",
       headers: {
@@ -70,7 +51,7 @@ const PostAjob = () => {
   };
   const handleUserMakeAdmin = (event) => {
     event.preventDefault();
-    const form = event.event;
+    const form = event.target;
     const companyName = form.companyName.value;
 
     console.log(user?.email);
@@ -94,122 +75,138 @@ const PostAjob = () => {
       });
   };
   return (
-    <div>
+    <div className="w-full">
       <form onSubmit={handlePostAJob}>
-        {/* company name */}
-        <div>
-          <label className="label">
-            <span className="label-text font-bold text-xl">Company Name </span>
-          </label>
-          <input
-            type="name"
-            placeholder="Enter your COmpany name "
-            name="companyName"
-            className="input input-bordered"
-            required
-          />
+        {/* this is for company and job  */}
+        <div className="flex justify-around">
+          {/* company name */}
+
+          <div className="w-2/4 mr-5">
+            {" "}
+            <label className="label">
+              <span className="label-text font-bold text-xl">
+                Company Name{" "}
+              </span>
+            </label>
+            <input
+              type="name"
+              placeholder="Enter your COmpany name "
+              name="companyName"
+              className="input input-bordered w-full"
+              required
+            />
+          </div>
+          {/* job Name */}
+          <div className="w-2/4 mr-5">
+            <label className="label">
+              <span className="label-text font-bold text-xl">
+                Job Name / which field{" "}
+              </span>
+            </label>
+            <input
+              type="name"
+              placeholder="Enter your COmpany name You are applying"
+              name="jobName"
+              className="input input-bordered w-full"
+              required
+            />
+          </div>
         </div>
 
-        {/* job Name */}
-        <div>
-          <label className="label">
-            <span className="label-text font-bold text-xl">
-              Job Name / which field{" "}
-            </span>
-          </label>
-          <input
-            type="name"
-            placeholder="Enter your COmpany name You are applying"
-            name="jobName"
-            className="input input-bordered"
-            required
-          />
+        <div className="flex justify-around">
+          {" "}
+          {/* jobTitle*/}
+          <div className="w-2/4 mr-5">
+            <label className="label">
+              <span className="label-text font-bold text-xl">
+                Job Title / About the job in sort
+              </span>
+            </label>
+            <input
+              type="name"
+              placeholder="Enter About the job in sort"
+              name="jobTitle"
+              className="input input-bordered w-full"
+              required
+            />
+          </div>
+          {/* duration */}
+          <div className="w-2/4 mr-5">
+            <label className="label">
+              <span className="label-text font-bold text-xl">
+                Duration of this contract month/year{" "}
+              </span>
+            </label>
+            <input
+              type="name"
+              placeholder="Enter the  in duration month/year"
+              name="duration"
+              className="input input-bordered w-full"
+              required
+            />
+          </div>
         </div>
-        {/* jobTitle*/}
-        <div>
-          <label className="label">
-            <span className="label-text font-bold text-xl">
-              Job Title / About the job in sort
-            </span>
-          </label>
-          <input
-            type="name"
-            placeholder="Enter About the job in sort"
-            name="jobTitle"
-            className="input input-bordered"
-            required
-          />
+        {/* TODO */}
+        <div className="flex justify-around">
+          {/* stipend */}
+          <div className="w-2/4 mr-5">
+            <label className="label">
+              <span className="label-text font-bold text-xl">Stipend </span>
+            </label>
+            <input
+              type="name"
+              placeholder="Enter the salary 000-000 USD"
+              name="stipend"
+              className="input input-bordered w-full"
+              required
+            />
+          </div>
+          {/*startDate  */}
+          <div className="w-2/4 mr-5">
+            <label className="label">
+              <span className="label-text font-bold text-xl">startDate </span>
+            </label>
+            <input
+              type="name"
+              placeholder="When requrting is start"
+              name="startDate"
+              className="input input-bordered w-full"
+              required
+            />
+          </div>
         </div>
 
-        {/* duration */}
-        <div>
-          <label className="label">
-            <span className="label-text font-bold text-xl">
-              Duration of this contract month/year{" "}
-            </span>
-          </label>
-          <input
-            type="name"
-            placeholder="Enter the  in duration month/year"
-            name="duration"
-            className="input input-bordered"
-            required
-          />
+        <div className="flex justify-around">
+          {/* experience */}
+          <div className="w-2/4 mr-5">
+            <label className="label">
+              <span className="label-text font-bold text-xl">
+                Experience TO apply in this Job
+              </span>
+            </label>
+            <input
+              type="name"
+              placeholder="Enter the 0-0 year / Fresher"
+              name="experience"
+              className="input input-bordered w-full"
+              required
+            />
+          </div>
+          {/* workFrom */}
+          <div className="w-2/4 mr-5">
+            <label className="label">
+              <span className="label-text font-bold text-xl">Work Place </span>
+            </label>
+            <input
+              type="name"
+              placeholder="Enter the location / work Form home"
+              name="workFrom"
+              className="input input-bordered w-full"
+              required
+            />
+          </div>
         </div>
-        {/* stipend */}
-        <div>
-          <label className="label">
-            <span className="label-text font-bold text-xl">Stipend </span>
-          </label>
-          <input
-            type="name"
-            placeholder="Enter the salary 000-000 USD"
-            name="stipend"
-            className="input input-bordered"
-            required
-          />
-        </div>
-        {/*startDate  */}
-        <div>
-          <label className="label">
-            <span className="label-text font-bold text-xl">startDate </span>
-          </label>
-          <input
-            type="name"
-            placeholder="When requrting is start"
-            name="startDate"
-            className="input input-bordered"
-            required
-          />
-        </div>
-        {/* experience */}
-        <div>
-          <label className="label">
-            <span className="label-text font-bold text-xl">
-              Experience TO apply in this Job
-            </span>
-          </label>
-          <input
-            type="name"
-            placeholder="Enter the 0-0 year / Fresher"
-            name="experience"
-            className="input input-bordered"
-            required
-          />
-        </div>
-        {/* workFrom */}
-        <div>
-          <label className="label">
-            <span className="label-text font-bold text-xl">Work Place </span>
-          </label>
-          <input
-            type="name"
-            placeholder="Enter the location / work Form home"
-            name="workFrom"
-            className="input input-bordered"
-            required
-          />
-        </div>
+
         {/* aboutTheWork */}
         <div>
           <label className="label">
@@ -221,7 +218,7 @@ const PostAjob = () => {
             type="name"
             placeholder="Enter About The Work"
             name="aboutTheWork"
-            className="input input-bordered"
+            className="input input-bordered w-full"
             required
           />
         </div>
@@ -236,7 +233,7 @@ const PostAjob = () => {
             type="name"
             placeholder="Enter The Skills for The Work"
             name="skill"
-            className="input input-bordered"
+            className="input input-bordered w-full"
             required
           />
         </div>
@@ -251,7 +248,7 @@ const PostAjob = () => {
             type="name"
             placeholder="Enter The info who Apply"
             name="whoApply"
-            className="input input-bordered"
+            className="input input-bordered w-full"
             required
           />
         </div>
@@ -272,7 +269,7 @@ const PostAjob = () => {
               type="name"
               placeholder="Admin Email "
               value={user?.email}
-              className="input input-bordered"
+              className="input input-bordered w-full"
               required
             />
           </div>
@@ -285,7 +282,7 @@ const PostAjob = () => {
               type="name"
               placeholder="Admin Email "
               value={"admin"}
-              className="input input-bordered"
+              className="input input-bordered w-full"
               required
             />
           </div>
@@ -299,7 +296,7 @@ const PostAjob = () => {
             type="name"
             placeholder="Enter your COmpany name "
             name="companyName"
-            className="input input-bordered"
+            className="input input-bordered w-full"
             required
           />
         </div>

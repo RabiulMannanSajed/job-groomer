@@ -9,14 +9,27 @@ const Info = () => {
             We Help To Get The Best Job And Find A Talent
           </h1>
           <p className="py-6">
-            Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
-            diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
-            lorem sit clita duo justo magna dolore erat amet
+            To provide you with relevant job information, I'll need more
+            specific details. Could you please specify the type of job,
+            industry, or any particular information you're looking for?
+            Additionally, let me know if you have any preferences or
+            requirements for the job information you're seeking
           </p>
           <ul className="py-6">
-            <li>1. Tempor erat elitr rebum at clita</li>
-            <li>2. Aliqu diam amet diam et eos</li>
-            <li>3. Clita duo justo magna dolore erat amet</li>
+            <li>
+              1. Streamline job hunting with advanced filters, enabling users to
+              refine searches based on location, industry, and experience.
+            </li>
+            <li>
+              2. Employ AI-driven algorithms to deliver personalized job
+              suggestions, ensuring a more efficient and relevant job-seeking
+              experience
+            </li>
+            <li>
+              3. Enhance accessibility and satisfaction through an intuitive
+              interface, simplifying navigation and optimizing the overall user
+              experience.
+            </li>
           </ul>
           <button className="btn btn-primary">Get Started</button>
         </div>

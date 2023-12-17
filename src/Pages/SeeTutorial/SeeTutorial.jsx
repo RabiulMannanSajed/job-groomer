@@ -1,37 +1,27 @@
-import React, { useEffect, useState } from "react";
-import TutorialInfo from "../TutorialInfo/TutorialInfo";
-import axios from "axios";
-import ReactPlayer from "react-player";
+import useTutorial from "../../hooks/useTutorial";
 
 const SeeTutorial = () => {
-  const [videoUrl, setVideoUrl] = useState("");
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get("http://localhost:5000/tutorial");
-        const videoData = response.data; // URL or video data
-        if (typeof videoData === "string") {
-          setVideoUrl(videoData);
-        } else {
-          const blob = new Blob([videoData]);
-          setVideoUrl(window.URL.createObjectURL(blob));
-        }
-      } catch (error) {
-        console.error(error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchData();
-  }, []);
+  const [tutorial] = useTutorial();
   return (
     <div>
-      <div>
-        <p>Uploaded by {}</p>
-        {loading && <p>Loading...</p>}
-        {videoUrl && <ReactPlayer url={videoUrl} controls />}
+      <p className="text-center font-bold text-xl bg-slate-700 text-white p-5 mb-5">
+        Uploaded Tutorial
+      </p>
+      <div className="grid grid-cols-2 place-items-center">
+        {tutorial.map((tutorialVideo) => (
+          <div key={tutorialVideo._id} className="mb-5 ">
+            <a
+              href={tutorialVideo.youtubeLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <video controls width="300" height="200" autoPlay muted loop>
+                <source src={tutorialVideo.youtubeLink} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </a>
+          </div>
+        ))}
       </div>
     </div>
   );

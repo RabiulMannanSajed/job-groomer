@@ -50,12 +50,12 @@ const Dashboard = () => {
                 <li className="font-bold">
                   <NavLink to="/dashboard/addTutorial"> Add Tutorial</NavLink>
                 </li>
-                <li className="font-bold">
-                  <NavLink to="/dashboard/manageItems"> Manage Item</NavLink>
-                </li>
 
                 <li className="font-bold">
                   <NavLink to="/dashboard/allUsers"> All user</NavLink>
+                </li>
+                <li className="font-bold">
+                  <NavLink to="/dashboard/makeQue"> Make Que</NavLink>
                 </li>
               </>
             ) : (

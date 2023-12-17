@@ -14,7 +14,6 @@ const JobInfoCart = ({ dataOfJob, id }) => {
   console.log("job ID", id);
   const {
     companyName,
-    companyLogo,
     location,
     jobTitle,
     duration,
@@ -38,9 +37,7 @@ const JobInfoCart = ({ dataOfJob, id }) => {
             <h1 className="mt-3 mb-3">{jobTitle}</h1>
             <p>{companyName}</p>
           </div>
-          <div>
-            <img src={companyLogo} alt="" />
-          </div>
+          <div></div>
         </div>
         <p className="mt-3  font-semibold">
           {" "}

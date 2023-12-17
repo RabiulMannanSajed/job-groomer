@@ -19,19 +19,33 @@ const AllUsers = () => {
       });
   };
   //   this is for make user admin base on office name
-  const handleOfficeName = (companyName, user) => {
-    fetch(`http://localhost:5000/users/officeName/${user._id}`, {
+  const handleOfficeName = (companyName, userId) => {
+    console.log("user", userId);
+    console.log(companyName);
+    const officeName = {
+      companyName,
+    };
+    fetch(`http://localhost:5000/users/officeName/${userId._id}`, {
       method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(officeName),
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log("this is the data", data);
         if (data.modifiedCount) {
           refetch();
+          console.log("value of count", data.modifiedCount);
           Swal.fire(
-            `Mr.${user.name} is become admin of this company ${companyName}`
+            `Mr.${userId.name} is become admin of this company ${companyName}`
           );
+        } else {
+          console.error("No modification occurred.");
         }
       });
+    console.log("this is user id", userId._id);
   };
   // to delete any user based on id
   const handleDelete = () => {};
@@ -70,6 +84,7 @@ const AllUsers = () => {
                     </button>
                   )}
                 </td>
+                {/* TODO : fixed the error  why the company name can't add */}
                 <td>
                   <div className="dropdown dropdown-hover">
                     <div
@@ -83,20 +98,16 @@ const AllUsers = () => {
                       tabIndex={0}
                       className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
                     >
-                      {/* here first i take the rest name and then i take the user send it to the fnc  */}
                       {office.map((officeName) => (
                         <li key={officeName._id}>
-                          {users.map((user) => (
-                            <a
-                              className="text-black"
-                              key={user._id}
-                              onClick={() =>
-                                handleOfficeName(officeName.companyName, user)
-                              }
-                            >
-                              {officeName.companyName}
-                            </a>
-                          ))}
+                          <a
+                            className="text-black"
+                            onClick={() =>
+                              handleOfficeName(officeName.companyName, user)
+                            }
+                          >
+                            {officeName.companyName}
+                          </a>
                         </li>
                       ))}
                     </ul>

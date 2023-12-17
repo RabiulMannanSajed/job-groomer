@@ -10,15 +10,20 @@ const ViewComment = () => {
     const usersComment = comment.filter(
       (userComments) => userComments.commentOnComp == companyName
     );
-    // setUserComments(usersComment);
-    // console.log(comments);
-  }, []);
+    setUserComments(usersComment);
+  }, [comment, companyName]);
 
   return (
     <div>
       <h2>User Feed Back and Que</h2>
-      <p>User Name:{comments.commentator}</p>
-      <p>Comment: {comments.comment}</p>
+
+      {/* Loop through comments to display each one */}
+      {comments.map((comment, index) => (
+        <div key={index}>
+          <p>User Name: {comment.commentator}</p>
+          <p>Comment: {comment.comment}</p>
+        </div>
+      ))}
     </div>
   );
 };

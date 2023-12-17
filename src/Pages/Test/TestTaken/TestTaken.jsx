@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProvider";
+import SeeTutorial from "../../SeeTutorial/SeeTutorial";
 
 const TestTaken = ({ examQues, jobName }) => {
   // this is use to take the id
@@ -11,7 +12,7 @@ const TestTaken = ({ examQues, jobName }) => {
 
   // this take the track of the  user
   const { user } = useContext(AuthContext);
-  /* this is fro his prev location and if he is not login then take him to 
+  /* this is fro his prev location and if he is not login then take him to
   login page after that take him to his page  */
   const navigate = useNavigate();
   console.log("this is job name ", jobName);
@@ -59,6 +60,10 @@ const TestTaken = ({ examQues, jobName }) => {
             </div>
           )}
 
+          {/* <Link to="/seeTutorial/:jobName"> */}
+          <Link to={`/seeTutorial/${officeName}`}>
+            <div className="btn btn-info"> See Tutorial</div>
+          </Link>
           <div className="overflow-x-auto">
             <table className="table">
               {/* head */}

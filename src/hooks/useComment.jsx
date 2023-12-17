@@ -3,16 +3,16 @@ import { useQuery } from "@tanstack/react-query";
 const useComment = () => {
   const {
     isPending,
-    data: comment = [],
+    data: talk = [],
     refetch,
   } = useQuery({
-    queryKey: ["comment"],
+    queryKey: ["talk"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:5000/comment");
+      const res = await fetch("http://localhost:5000/talk");
       return res.json();
     },
   });
-  return [comment, refetch, isPending];
+  return [talk, refetch, isPending];
 };
 
 export default useComment;
