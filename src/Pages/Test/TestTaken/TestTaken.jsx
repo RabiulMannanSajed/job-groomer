@@ -61,7 +61,7 @@ const TestTaken = ({ examQues, jobName }) => {
           )}
 
           {/* <Link to="/seeTutorial/:jobName"> */}
-          <Link to={`/seeTutorial/${officeName}`}>
+          <Link to={`/seeTutorial`}>
             <div className="btn btn-info"> See Tutorial</div>
           </Link>
           <div className="overflow-x-auto">

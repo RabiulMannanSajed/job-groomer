@@ -50,7 +50,7 @@ const AdminHome = () => {
         if (data.modifiedCount) {
           Swal.fire({
             title: "Are you sure?",
-            text: "You won't be able to Hire this Candidate",
+            text: "You reject this Candidate",
             icon: "warning",
             showCancelButton: true,
             confirmButtonColor: "#3085d6",

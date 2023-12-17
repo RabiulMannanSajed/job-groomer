@@ -17,6 +17,7 @@ import AddTutorial from "../Pages/Dashboard/AddTutorial/AddTutorial";
 import SeeTutorial from "../Pages/SeeTutorial/SeeTutorial";
 import FewJobs from "../Pages/FewJobs/FewJobs/FewJobs";
 import MakeQue from "../Pages/Dashboard/MakeQue/MakeQue";
+import About from "../Pages/About/About";
 
 export const router = createBrowserRouter([
   {
@@ -74,6 +75,14 @@ export const router = createBrowserRouter([
       {
         path: "/seeTutorial/:jobName",
         element: <SeeTutorial></SeeTutorial>,
+      },
+      {
+        path: "/seeTutorial",
+        element: <SeeTutorial></SeeTutorial>,
+      },
+      {
+        path: "/about",
+        element: <About></About>,
       },
     ],
   },

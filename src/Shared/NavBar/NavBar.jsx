@@ -27,7 +27,7 @@ const NavBar = () => {
         // if user then it work
         <>
           <li className="text-green-500 hover:text-black text-xl">
-            <Link to="/dashboard/userHome">See more Info</Link>
+            <Link to="/dashboard/userHome">User Profile </Link>
           </li>
         </>
       ) : (

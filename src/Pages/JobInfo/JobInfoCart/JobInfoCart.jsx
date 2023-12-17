@@ -9,9 +9,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./JobInfoCart.css";
 import OfficeLocation from "../../../Shared/OfficeLocation/OfficeLocation";
 import { Link } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../../Provider/AuthProvider";
+import useUser from "../../../hooks/useUser";
 
 const JobInfoCart = ({ dataOfJob, id }) => {
-  console.log("job ID", id);
+  const { user } = useContext(AuthContext);
+  const [users] = useUser();
+  const [userData, setUserData] = useState([]);
+  // if user is admin he can not attent exam
+  useEffect(() => {
+    const userinfo = users.find((userEmail) => userEmail?.email == user?.email);
+
+    setUserData(userinfo);
+  }, []);
+  console.log("user Email", userData?.role);
   const {
     companyName,
     location,
@@ -112,9 +124,31 @@ const JobInfoCart = ({ dataOfJob, id }) => {
             <p>No skills specified</p>
           )}
         </div>
-        <Link to={`/takeTest/${jobName}?id=${id}`}>
-          <div className="items-center btn btn-neutral">Take a test </div>
-        </Link>
+        {userData?.role === "admin" ? (
+          <></>
+        ) : (
+          <>
+            {" "}
+            {user && user?.email ? (
+              <>
+                {" "}
+                <Link to={`/takeTest/${jobName}?id=${id}`}>
+                  <div className="items-center btn btn-neutral">
+                    Take a test{" "}
+                  </div>
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link to="/login">
+                  <div className="items-center btn btn-neutral">
+                    Login to Take a test{" "}
+                  </div>
+                </Link>
+              </>
+            )}
+          </>
+        )}
       </div>
       <OfficeLocation locValue={locValue}></OfficeLocation>
     </div>

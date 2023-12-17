@@ -1,11 +1,18 @@
 import { useContext, useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
-import { Link, useLoaderData, useLocation, useParams } from "react-router-dom";
+import {
+  Link,
+  useLoaderData,
+  useLocation,
+  useNavigate,
+  useParams,
+} from "react-router-dom";
 
 const Apply = () => {
   const [officeName, setOfficeName] = useState([]);
   const location = useLocation();
+  const navigate = useNavigate();
   const searchParams = new URLSearchParams(location.search);
   const id = searchParams.get("id");
   console.log("id from apply", id);
@@ -55,7 +62,8 @@ const Apply = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
-          Swal.fire("User created successfully");
+          Swal.fire("User Apply successfully");
+          navigate("/");
         }
       });
   };

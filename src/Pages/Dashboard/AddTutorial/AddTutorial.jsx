@@ -6,7 +6,7 @@ import useUser from "../../../hooks/useUser";
 const AddTutorial = () => {
   const [name, setName] = useState([]);
   const { user } = useContext(AuthContext);
-  const [users] = useUser();
+  const [users, refetch] = useUser();
 
   useEffect(() => {
     const uploaderName = users.find(
@@ -47,7 +47,7 @@ const AddTutorial = () => {
       .then((response) => response.json())
       .then((data) => {
         if (data.insertedId) {
-          Swal.fire("User created successfully");
+          Swal.fire("Video uploaded successfully");
         }
       })
       .catch((error) => {
@@ -55,6 +55,19 @@ const AddTutorial = () => {
       });
 
     console.log("Submitted YouTube link:", youtubeLink);
+  };
+  console.log(showVideo);
+  refetch();
+  const handleDelete = (sv) => {
+    fetch(`http://localhost:5000/tutorial/${sv._id}`, {
+      method: "Delete",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.deletedCount > 0) {
+          Swal.fire("Video delete");
+        }
+      });
   };
   return (
     <div className="App ml-5">
@@ -68,6 +81,9 @@ const AddTutorial = () => {
                 Your browser does not support the video tag.
               </video>
             </a>
+            <button onClick={() => handleDelete(sv)} className="btn btn-error">
+              Delete
+            </button>
           </div>
         ))}
       </div>

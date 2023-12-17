@@ -45,7 +45,7 @@ const PostAjob = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
-          Swal.fire("User created successfully");
+          Swal.fire("Office created successfully");
         }
       });
   };
@@ -70,7 +70,7 @@ const PostAjob = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
-          Swal.fire("User created successfully");
+          Swal.fire("Office Admin created successfully");
         }
       });
   };
@@ -288,7 +288,7 @@ const PostAjob = () => {
           </div>
         </div>
         {/* company name */}
-        <div>
+        {/* <div>
           <label className="label">
             <span className="label-text font-bold text-xl">Company Name </span>
           </label>
@@ -302,7 +302,7 @@ const PostAjob = () => {
         </div>
         <div className="form-control mt-6">
           <input className="btn btn-primary" type="submit" value="submit" />
-        </div>
+        </div> */}
       </form>
     </div>
   );
